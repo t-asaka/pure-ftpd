@@ -473,6 +473,8 @@ void pw_pgsql_check(AuthResult * const result,
                                   escaped_decimal_ip)) == NULL) {
         goto bye;
     }
+
+    printf("password: %s \n", spwd);
     if (uid == NULL) {
         uid = pw_pgsql_getquery(id_sql_server, sqlreq_getuid,
                                 escaped_account, escaped_ip,
